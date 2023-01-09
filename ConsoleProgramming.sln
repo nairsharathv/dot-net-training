@@ -3,20 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "ConsoleProgramming\HelloWorld.csproj", "{2F9D5411-A4E6-4D25-9382-401A3B514741}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "ConsoleProgramming\HelloWorld.csproj", "{2F9D5411-A4E6-4D25-9382-401A3B514741}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSyntax", "BasicSyntax\BasicSyntax.csproj", "{85A20128-C5DF-480A-828C-4E5292ECF11E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicSyntax", "BasicSyntax\BasicSyntax.csproj", "{85A20128-C5DF-480A-828C-4E5292ECF11E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathematicalOperators", "MathematicalOperators\MathematicalOperators.csproj", "{7DB92562-4601-416E-AA0C-37B284B71A00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathematicalOperators", "MathematicalOperators\MathematicalOperators.csproj", "{7DB92562-4601-416E-AA0C-37B284B71A00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalOperators", "ConditionalOperators\ConditionalOperators.csproj", "{1CBB0825-DAAC-44D4-8279-52023D485B48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionalOperators", "ConditionalOperators\ConditionalOperators.csproj", "{1CBB0825-DAAC-44D4-8279-52023D485B48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepetitionStatements", "RepetitionStatements\RepetitionStatements.csproj", "{8062F354-B432-4451-85AF-3C038F2ECA26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepetitionStatements", "RepetitionStatements\RepetitionStatements.csproj", "{8062F354-B432-4451-85AF-3C038F2ECA26}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{00BFAE6A-A275-4856-8BF5-00F2D90FC0CE}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment1", "Assignment1\Assignment1.csproj", "{DEE60225-F274-4841-BB2E-63588F9C5AAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{8062F354-B432-4451-85AF-3C038F2ECA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8062F354-B432-4451-85AF-3C038F2ECA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8062F354-B432-4451-85AF-3C038F2ECA26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEE60225-F274-4841-BB2E-63588F9C5AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE60225-F274-4841-BB2E-63588F9C5AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE60225-F274-4841-BB2E-63588F9C5AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE60225-F274-4841-BB2E-63588F9C5AAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
