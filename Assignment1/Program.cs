@@ -1,10 +1,11 @@
 ﻿
 // TASK 1: Ask the user to enter two numbers and print their sum and product on screen
-
+Console.WriteLine("TASK 1: Calculate the sum and product of two numbers");
+Console.WriteLine();
 Console.WriteLine("Please input two integers");
-Console.WriteLine("Please provide first number: ");
+Console.Write("Please provide first number: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Please provide second number: ");
+Console.Write("Please provide second number: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine($"Sum of the inputs provided is: {num1 + num2}");
@@ -14,9 +15,13 @@ Console.WriteLine($"Product of inputs provided is: {num1 * num2}");
 // TASK 2: Declare 3 variables a, b and c. Get the input from the user for these variables. Implement the equation (((a + b) / c) *a)
 
 Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("TASK 2: Implement the equation (((a + b) / c) *a)");
+Console.WriteLine();
 double a = 0.0;
 double b = 0.0;
 double c = 0.0;
+double result = 0;
 
 Console.Write("Input value for a: ");
 a = Convert.ToDouble(Console.ReadLine());
@@ -27,7 +32,8 @@ b = Convert.ToDouble(Console.ReadLine());
 Console.Write("Input value for c: ");
 c = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine($"{a} {b} {c}");
+result = (((a + b) / c) * a);
+Console.WriteLine($"(((a + b) / c) *a) = {result}");
 
 
 /* 
@@ -40,7 +46,10 @@ If no more turns are available print "You lost" and exit
 If guessed correctly print "You win" and exit 
 */
 
-
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("TASK 3: Implement a number guessing game called Fortune");
+Console.WriteLine();
 Console.WriteLine("Welcome to Fortune");
 Console.WriteLine("Rule 1: You have 5 attempts to guess the lucky number ");
 Console.WriteLine("Rule 2: Numbers can only be whole numbers between 0 and 100 ");
