@@ -15,51 +15,32 @@ Quit the program
 
 
 int accountBalance = 789098;
-int storedCardNumber = 12345;
-int storedPinNumber = 1234;
 
-bool CheckCredentials(int storedCardNumber, int storedPinNumber)
+
+bool CheckCredentials()
 {
-    Console.WriteLine("Please enter your 5 digit card number");
-    string inputCardNumber = Console.ReadLine();
-    Console.WriteLine("Please enter your 4 digit pin of your card number");
+    int storedCardNumber = 12345;
+    int storedPinNumber = 1234;
+    Console.WriteLine("Please enter your 5 digit card number: ");
+    int inputCardNumber = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Please enter your 4 digit pin of your card number: ");
     int inputPinNumber = Convert.ToInt32(Console.ReadLine());
-    try
-    {
-        int CardNumber;
-        if (int.TryParse(inputCardNumber, out CardNumber))
-        {
-            Console.WriteLine(inputCardNumber);
-            return true;
-        }
-        else 
-        { 
-            Console.WriteLine("Not a number");
-            return false;
-        
-        }
-    }   
-    catch (Exception)
-    {
-
-        throw;
-    }
-    /*
     if (storedCardNumber == inputCardNumber && storedPinNumber == inputPinNumber)
     {
         return true;
     }
     else
     {
+        Console.WriteLine("Incorrect credentials");
         return false;
     }
-    */
 }
 
+bool isLoggedIn = CheckCredentials();
 
 int LoadMenu()
 {
-    if (CheckCredentials(storedCardNumber, storedPinNumber))
+    if (isLoggedIn)
     {
         Console.WriteLine("Welcome to you account");
         Console.WriteLine("Press 1: Check balance");
@@ -73,21 +54,26 @@ int LoadMenu()
 
 
 
-
-
-
 void CheckBalance()
 {
-    Console.WriteLine($"Your account balance is {accountBalance}");
+    Console.WriteLine($"Your account balance is Rs.{accountBalance} .");
 }
 
 void CashWithdrawal()
 {
-    Console.WriteLine("Please enter the amount you want to withdraw. ");
+    Console.WriteLine("Please enter the amount you want to withdraw in Rs .");
     int withdrawalAmount = Convert.ToInt32(Console.ReadLine());
-    accountBalance -= withdrawalAmount;
-    Console.WriteLine($"Successfully withdrawn Rs.{withdrawalAmount}");
-    Console.WriteLine($"Your account balance is {accountBalance}");
+    if (accountBalance > withdrawalAmount)
+    {
+        accountBalance -= withdrawalAmount;
+        Console.WriteLine($"Successfully withdrawn Rs.{withdrawalAmount} .");
+        Console.WriteLine($"Your account balance is Rs.{accountBalance} .");
+    }
+    else
+    {
+        Console.WriteLine("You have insufficient funds in your account to make this withdrawal");
+        Console.WriteLine($"Your account balance is Rs.{accountBalance} .");
+    }   
 }
 
 void CashDeposit()
@@ -95,8 +81,8 @@ void CashDeposit()
     Console.WriteLine("Please enter the amount you want to deposit. ");
     int depositAmount = Convert.ToInt32(Console.ReadLine());
     accountBalance += depositAmount;
-    Console.WriteLine($"Successfully deposited Rs.{depositAmount}");
-    Console.WriteLine($"Your account balance is {accountBalance}");
+    Console.WriteLine($"Successfully deposited Rs.{depositAmount} .");
+    Console.WriteLine($"Your account balance is Rs.{accountBalance} .");
 }
 
 void Quit()
