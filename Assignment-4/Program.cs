@@ -27,6 +27,4 @@
 
 ShoppingCart shoppingCart = new ShoppingCart();
 shoppingCart.AddToCart();
-
-Order order = new Order();
-order.GetTotalPrice();
+shoppingCart.GetOrder();

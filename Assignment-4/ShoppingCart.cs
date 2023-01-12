@@ -5,7 +5,7 @@
     public void AddToCart() 
     {
         bool isShopping = true;
-
+        entries = new List<CartEntry>();
         while (isShopping)
         {
             Console.Write("Enter item name: ");
@@ -16,7 +16,6 @@
             int itemPrice = Convert.ToInt32(Console.ReadLine());
 
             CartEntry cartEntry = new CartEntry(ItemName: itemName, Quantity: orderQuantity, Price: itemPrice);
-            entries = new List<CartEntry>();
             entries.Add(cartEntry);
             Console.WriteLine("Item added to cart successfully");
             Console.Write("Press Q to quit or any other letter to continue shopping: ");
@@ -26,6 +25,12 @@
                 isShopping = false;
             }
         }
+    }
+
+    public void GetOrder()
+    {
+        Order order = new Order(entries);
+        order.GetTotalPrice();
     }
 
 }
